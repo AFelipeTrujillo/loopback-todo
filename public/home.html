@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"
+    integrity="sha256-23hi0Ag650tclABdGCdMNSjxvikytyQ44vYGo9HyOrU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.7.8/angular-resource.min.js"
+    integrity="sha256-SlE5Vg142yVikdxa7FODJBO03XvGQGnTRcO2Tk23Mow=" crossorigin="anonymous"></script>
+  <script src="todo.js"></script>
+</head>
+
+<body ng-app="todo">
+  <div ng-controller="TodoController as vm">
+    <h3>List</h3>
+    <h4>Count: {{ vm.count }}</h4>
+    <table border="1">
+      <tr>
+        <th colspan="5">To-Do</th>
+      </tr>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Due Date</th>
+        <th>Options</th>
+      </tr>
+      <tr ng-repeat="(key, value) in vm.todos">
+        <td>{{ value.id }}</td>
+        <td>{{ value.title }}</td>
+        <td>{{ value.description }}</td>
+        <td>{{ value.due_date | date }}</td>
+        <td>
+          <button>Done</button>
+          <button>Edit</button>
+          <button ng-click="vm.delete(value.id)">Delete</button>
+        </td>
+      </tr>
+    </table>
+    <hr>
+    <h3>Form</h3>
+    <table border="1">
+      <tr>
+        <td>Title</td>
+        <td><input type="text" ng-model="vm.title"></td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td><textarea ng-model="vm.description"></textarea></td>
+      </tr>
+      <tr>
+        <td>Due Date</td>
+        <td><input type="date" ng-model="vm.due_date"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button ng-click="vm.create(vm.title, vm.description, vm.due_date)">Create</button></td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>

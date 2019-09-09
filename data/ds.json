@@ -1,0 +1,10 @@
+{
+  "ids": {
+    "Todo": 6
+  },
+  "models": {
+    "Todo": {
+      "5": "{\"title\":\"Tareas de Prueba\",\"description\":\"Pruebas asdasdsad\",\"due_date\":\"2019-02-10T05:00:00.000Z\",\"id\":5}"
+    }
+  }
+}

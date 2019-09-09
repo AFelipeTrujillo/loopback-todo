@@ -9,3 +9,10 @@
 - title (Mandatory)(String)
 - description (String)
 - due_date (Date)
+
+### Version 1
+
+![v1](https://i.ibb.co/KKmdyCy/image.png)
+
+* Angular Js 1.7
+* Memory DB

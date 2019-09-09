@@ -10,7 +10,7 @@
 - description (String)
 - due_date (Date)
 
-### Version 1
+### Version 1
 
 ![v1](https://i.ibb.co/KKmdyCy/image.png)
 
